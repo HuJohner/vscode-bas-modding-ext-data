@@ -1,0 +1,72 @@
+{
+    "id": "./schemas/quest/poi/Destruction.json",
+    "title": "Destruction POI",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./PointOfInterestBase.json"
+        }
+    ],
+    "properties": {
+        "$type": {
+            "type": "string",
+            "const": "QuestFramework.POI.Destruction, QuestFramework"
+        },
+        "itemIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "itemFilter": {
+            "type": "string",
+            "default": "NoneExcept",
+            "enum": [
+                "NoneExcept",
+                "AnyExcept"
+            ]
+        },
+        "itemVariableQuestId": {
+            "type": "string"
+        },
+        "itemVariableName": {
+            "type": "string"
+        },
+        "creatureIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "creatureFilter": {
+            "type": "string",
+            "default": "NoneExcept",
+            "enum": [
+                "NoneExcept",
+                "AnyExcept"
+            ]
+        },
+        "creatureVariableQuestId": {
+            "type": "string"
+        },
+        "creatureVariableName": {
+            "type": "string"
+        }
+    },
+    "anyOf": [
+        {
+            "required": [
+                "creatureIds",
+                "creatureVariableQuestId",
+                "creatureVariableName"
+            ]
+        },
+        {
+            "required": [
+                "itemIds",
+                "itemVariableQuestId",
+                "itemVariableName"
+            ]
+        }
+    ]
+}

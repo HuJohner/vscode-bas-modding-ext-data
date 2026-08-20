@@ -1,0 +1,36 @@
+{
+    "id": "./schemas/catalogdata/ItemWheelMenuData.json",
+    "title": "ItemWheelMenuData",
+    "x-type": "ItemWheelMenuFramework.ItemWheelMenuData, ItemWheelMenuFramework",
+    "description": "A Item Wheel Menu for Item Wheel Menu Framework",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./CatalogData.json"
+        }
+    ],
+    "properties": {
+        "$type": {
+            "const": "ItemWheelMenuFramework.ItemWheelMenuData, ItemWheelMenuFramework"
+        },
+        "version": {
+            "const": 0
+        },
+        "orbCenterEffectId": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "items": {
+            "type": "array",
+            "items": {
+                "$ref": "../itemwheelmenu/ItemWheelMenuItem.json"
+            },
+            "minItems": 1
+        }
+    },
+    "required": [
+        "items"
+    ]
+}

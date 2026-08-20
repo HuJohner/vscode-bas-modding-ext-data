@@ -1,0 +1,16 @@
+{
+    "id": "./schemas/quest/interaction/DisablePoi.json",
+    "title": "DisablePoi interaction",
+    "description": "A DisablePoi interaction to disable a point of interest",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./Interaction.json"
+        }
+    ],
+    "properties": {
+        "$type": {
+            "const": "QuestFramework.Interactions.DisablePoi, QuestFramework"
+        }
+    }
+}

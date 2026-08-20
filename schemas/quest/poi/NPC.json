@@ -1,0 +1,47 @@
+{
+    "id": "./schemas/quest/poi/NPC.json",
+    "title": "NPC POI",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./PointOfInterestBase.json"
+        }
+    ],
+    "properties": {
+        "$type": {
+            "type": "string",
+            "const": "QuestFramework.POI.Npc, QuestFramework"
+        },
+        "rotationY": {
+            "type": "number"
+        },
+        "creatureId": {
+            "type": "string"
+        },
+        "factionId": {
+            "type": "integer"
+        },
+        "containerId": {
+            "type": "string"
+        },
+        "brainId": {
+            "type": "string"
+        },
+        "failQuestOnKill": {
+            "type": "boolean",
+            "default": true
+        },
+        "disablePoiOnKill": {
+            "type": "boolean",
+            "default": true
+        },
+        "despawnOnInvalid": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "required": [
+        "rotationY",
+        "creatureId"
+    ]
+}

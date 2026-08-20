@@ -1,0 +1,28 @@
+{
+    "id": "./schemas/quest/poi/GoToCoord.json",
+    "title": "GoToCoord POI",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./PointOfInterestBase.json"
+        }
+    ],
+    "properties": {
+        "$type": {
+            "type": "string",
+            "const": "QuestFramework.POI.GoToCoord, QuestFramework"
+        },
+        "destinationPosition": {
+            "$ref": "../../Vector3.json"
+        },
+        "destinationRotationY": {
+            "type": "number"
+        },
+        "text": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "destinationPosition"
+    ]
+}

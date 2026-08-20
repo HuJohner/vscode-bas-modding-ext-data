@@ -1,0 +1,32 @@
+{
+    "id": "./schemas/itemwheelmenu/ItemWheelMenuItem.json",
+    "title": "ItemWheelMenuItem",
+    "type": "object",
+    "properties": {
+        "$type": {
+            "type": "string",
+            "const": "ItemWheelMenuFramework.ItemWheelMenuData+WheelItem, ItemWheelMenuFramework"
+        },
+        "itemId": {
+            "type": "string"
+        },
+        "iconEffectId": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "requiredSkillId": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "transferCustomData": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "itemId"
+    ]
+}

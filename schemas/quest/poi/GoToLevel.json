@@ -1,0 +1,43 @@
+{
+    "id": "./schemas/quest/poi/GoToLevel.json",
+    "title": "GoToLevel POI",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./PointOfInterestBase.json"
+        }
+    ],
+    "properties": {
+        "$type": {
+            "type": "string",
+            "const": "QuestFramework.POI.GoToLevel, QuestFramework"
+        },
+        "destinationLevelId": {
+            "type": "string"
+        },
+        "destinationLevelMode": {
+            "type": "string"
+        },
+        "destinationLevelOptions": {
+            "type": "array",
+            "items": {
+                "$ref": "../../LevelOption.json"
+            }
+        },
+        "text": {
+            "type": "string"
+        },
+        "destinationPosition": {
+            "$ref": "../../Vector3.json"
+        },
+        "destinationRotationY": {
+            "type": "number"
+        },
+        "saveContainer ": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "destinationLevelId"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "id": "./schemas/quest/poi/PointOfInterest.json",
+    "title": "PointOfInterest",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./PointOfInterestBase.json"
+        }
+    ],
+    "properties": {
+        "$type": {
+            "type": "string",
+            "const": "QuestFramework.POI.PointOfInterest, QuestFramework"
+        }
+    }
+}
