@@ -16,6 +16,12 @@
         "version": {
             "const": 0
         },
+        "allowedGameModes": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
         "pois": {
             "type": "array",
             "items": {

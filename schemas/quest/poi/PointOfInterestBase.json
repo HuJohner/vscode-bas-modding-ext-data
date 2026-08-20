@@ -32,6 +32,10 @@
         "levelId": {
             "type": "string"
         },
+        "levelMode ": {
+            "type": "string",
+            "default": "CrystalHunt"
+        },
         "areaId": {
             "type": [
                 "string",
